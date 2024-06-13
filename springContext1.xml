@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean id="address" class="com.springCore.SpringCore.DependentObject.Address">
+	<constructor-arg name="city" value="Kathmandu" type="String"></constructor-arg>
+	<constructor-arg name="country" value="Nepal" type="String"></constructor-arg>
+</bean>
+<bean id="employee1" class="com.springCore.SpringCore.DependentObject.Employee">
+	<constructor-arg  name="employeeId" value="100" type="int" ></constructor-arg>
+	<constructor-arg  name="employeeName" value="John" type="String" ></constructor-arg>
+	<constructor-arg  name="employeeSalary" value="100000.00" type="float" ></constructor-arg>
+	<constructor-arg><ref  bean="address"/></constructor-arg>
+</bean>
+
+<!-- this is my  bean-->
+</beans>

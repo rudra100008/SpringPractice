@@ -7,18 +7,56 @@ private int questionID;
 private String questions;
 private List<String> answers;
 
+
+public Question() {
+	super();
+}
 public Question(int id,String questions,List<String> answers) {
 	super();
      this.questionID=id;
      this.questions=questions;
      this.answers=answers;
 }
-public void displayAnswer() {
-	for(String s:answers) {
-		System.out.println(s);
-	}	
-  }
-  public String toString() {
+
+
+
+  public int getQuestionID() {
+	return questionID;
+}
+
+
+
+public void setQuestionID(int questionID) {
+	this.questionID = questionID;
+}
+
+
+
+public String getQuestions() {
+	return questions;
+}
+
+
+
+public void setQuestions(String questions) {
+	this.questions = questions;
+}
+
+
+
+public List<String> getAnswers() {
+	return answers;
+}
+
+
+
+public void setAnswers(List<String> answers) {
+	this.answers = answers;
+}
+
+
+
+public String toString() {
 	  StringBuilder sb=new StringBuilder();
 	  sb.append("\t-----Quiz-----\n")
 	  .append("\nQuestion Id: ").append(questionID)

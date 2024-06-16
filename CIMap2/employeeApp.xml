@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean class="com.springCore.SpringCore.CIMap2.EmployeeInfo2" name="employee2">
+	<constructor-arg type="String" value="9813959554" />
+	<constructor-arg type="String" value="Narayantar" />
+</bean>
+
+<bean class="com.springCore.SpringCore.CIMap2.EmployeeInfo" name="employee1">
+	<constructor-arg type="String" value="Java Developer" />
+	<constructor-arg type="String" value="ashum@gmail.com" />
+	<constructor-arg type="String" value="Nepal" />
+	<constructor-arg type="double" value="1000000.00"></constructor-arg>
+</bean>
+<bean class="com.springCore.SpringCore.CIMap2.Employee" name="employee">
+	<constructor-arg type="int" value="01"/>
+	<constructor-arg type="String" value="Ashum"/>
+	<constructor-arg>
+		<map>
+			<entry key-ref="employee1" value-ref="employee2"></entry>
+		</map>
+	</constructor-arg>
+</bean>
+
+</beans>

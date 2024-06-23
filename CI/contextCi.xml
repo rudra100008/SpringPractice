@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Define a simple bean -->
+   <bean name="add" class="com.SpringCore.Spring.CI.Addition">
+      <constructor-arg  type="int"  value="12"  index="1"  />
+      <constructor-arg   type="int" value="24"  index="0"/>
+   </bean>
+  
+  <bean name="add1" class="com.SpringCore.Spring.CI.Addition">
+      <constructor-arg type="double" value="21" ></constructor-arg>
+      <constructor-arg   type="double" value="24" />
+   </bean>
+</beans>

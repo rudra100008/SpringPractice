@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Define StudentInfo beans -->
+    <bean id="studentInfo1" class="com.springCore.SpringCore.CICollection3.StudentInfo">
+        <property name="name" value="Shyam"/>
+        <property name="address" value="Narayantar"/>
+        <property name="marks" value="80"/>
+    </bean>
+
+    <bean id="studentInfo2" class="com.springCore.SpringCore.CICollection3.StudentInfo">
+        <property name="name" value="Ram"/>
+        <property name="address" value="Kathmandu"/>
+        <property name="marks" value="85"/>
+    </bean>
+
+    <!-- Define a standalone list of StudentInfo beans -->
+    <util:list id="studentInfoList">
+        <ref bean="studentInfo1"/>
+        <ref bean="studentInfo2"/>
+    </util:list>
+
+    <!-- Define the Student bean and reference the standalone list -->
+    <bean id="student" class="com.springCore.SpringCore.CICollection3.Student">
+        <property name="id" value="01"/>
+        <property name="studentList" ref="studentInfoList"/>
+    </bean>
+
+</beans>

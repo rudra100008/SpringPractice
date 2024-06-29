@@ -10,9 +10,13 @@ http://www.springframework.org/schema/context/spring-context.xsd">
   
   
   <context:annotation-config />
-<bean class="com.springCore.SpringCore.AutowiringAnnotation.Address" name="address">
+<bean class="com.springCore.SpringCore.AutowiringAnnotation.Address" name="address1">
  <property name="city" value="Kathmandu" />
  <property name="country" value="Nepal"/>
+</bean>
+<bean class="com.springCore.SpringCore.AutowiringAnnotation.Address" name="address2">
+ <property name="city" value="Delhi" />
+ <property name="country" value="Bharat"/>
 </bean>
 
 <bean class="com.springCore.SpringCore.AutowiringAnnotation.Employee" name="employee">

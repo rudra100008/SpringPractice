@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- Define StudentInfo beans -->
+    <util:list list-class="java.util.LinkedList" id="id">
+        <value>01</value>
+        <value>02</value>
+        <value>03</value>
+        <value>04</value>
+    </util:list>
+    
+    <util:list list-class="java.util.LinkedList" id="bookName">
+        <value>Pride and Prejudice </value>
+        <value>1984  </value>
+        <value>A Tree Grows in Brooklyn </value>
+        <value>The Book Thief </value>
+    </util:list>
+   
+    <util:map id="price" map-class="java.util.HashMap">
+        <entry key="Pride and Prejudice by Jane Austen" value="1000"></entry>
+        <entry key="1984 by George Orwell" value="1200"></entry>
+        <entry key="A Tree Grows in Brooklyn by Betty Smith" value="1500"></entry>
+        <entry key="The Book Thief by Markus Zusak" value="900"></entry>
+    </util:map>
+    <bean class="com.springCore.SpringCore.CICollection4.Book" name="book">
+      <property name="id">
+       <ref  bean="id" />
+      </property>
+      <property name="bookName">
+      <ref bean="bookName" />
+      </property>
+      <property name="price">
+      <ref bean="price"/>
+      </property>
+    </bean>
+
+</beans>

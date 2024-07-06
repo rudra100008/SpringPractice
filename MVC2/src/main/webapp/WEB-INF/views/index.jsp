@@ -25,6 +25,7 @@ out.println("<li>"+s+"</li>");
 	out.println("<li>No friends available</li> ");
 }
 %>
-
+<a href="http://localhost:8080/MVC2/help">Help</a>
+<a href="http://localhost:8080/MVC2/hello">Hello</a>
 </body>
 </html>

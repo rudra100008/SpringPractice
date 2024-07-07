@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+ <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
  <%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.time.LocalDateTime"%>
-<%@ taglib prefix="c" uri="http://jakarta.servlet.jsp.jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -23,8 +23,8 @@ DateTimeFormatter time=DateTimeFormatter.ofPattern("hh-mm-ss"); */
 
 <hr>
 <h3>Marks</h3>
-<%--  <c:forEach var="items" items="${marks}">
+ <c:forEach var="items" items="${marks}">
     <p>${items}</p>
-</c:forEach> --%>
+</c:forEach>
 </body>
 </html>

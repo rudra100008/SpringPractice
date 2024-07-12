@@ -37,11 +37,11 @@
     <artifactId>spring-orm</artifactId>
     <version>6.1.6</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+
 <dependency>
     <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-core</artifactId>
-    <version>6.1.6.Final</version>
+    <artifactId>hibernate-core-jakarta</artifactId>
+    <version>5.5.7.Final</version> 
 </dependency>
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>

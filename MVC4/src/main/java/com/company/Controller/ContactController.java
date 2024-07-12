@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.company.Model.User;
 import com.company.Service.UserService;
+import com.company.model.User;
 
 @Controller
 public class ContactController {
@@ -32,6 +32,11 @@ public class ContactController {
 	public String handleForm(@ModelAttribute User user,Model model) 
 	{
 		System.out.println(user);
+
+        if (user.getPassword().isBlank()) {
+			return "redirect:/contact";
+		}
+		
 		this.userService.createUser(user);
 		return "result";
 	}

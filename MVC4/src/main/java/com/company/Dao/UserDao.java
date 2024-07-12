@@ -3,7 +3,8 @@ package com.company.Dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
-import com.company.Model.User;
+
+import com.company.model.User;
 
 import jakarta.transaction.Transactional;
 

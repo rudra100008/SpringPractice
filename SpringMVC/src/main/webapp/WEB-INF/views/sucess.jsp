@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>Your Registration is SucessFull.</h1>
+<p>${form}</p>
 </body>
 </html>

@@ -55,7 +55,30 @@
                 <label for="address" class="form-label">Address</label>
                 <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
             </div>
-           
+             
+         <ul class="list-group"  >
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="Java"  name="course" aria-label="...">
+                  Java
+           </li>
+           <li class="list-group-item">
+             <input class="form-check-input me-1" type="checkbox" value="python" name="course" aria-label="...">
+               Python
+           </li>
+           <li class="list-group-item">
+             <input class="form-check-input me-1" type="checkbox" value="c/c++" name="course" aria-label="...">
+               C/C++
+           </li>
+           <li class="list-group-item">
+             <input class="form-check-input me-1" type="checkbox" value="javaScipt" name="course" aria-label="...">
+                JavaScript
+           </li>
+           <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="C#" name="course" aria-label="...">
+              C#
+          </li>
+      </ul>
+             
             <div class="mb-3">
                 <label for="country" class="form-label">Country</label>
                 <select class="form-select" id="country" name="country" aria-label="Default select example">

@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Registration Sucess</title>
+<title>Registration Success</title>
 </head>
 <body>
 <h1>Your Registration is SucessFull.</h1>
 <p>${form}</p>
+<p>${address.street}</p>
 </body>
 </html>

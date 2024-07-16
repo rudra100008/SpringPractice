@@ -31,6 +31,11 @@
                 <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
+             <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" name="date" aria-describedby="date" placeholder="dd/mm/yy"  required>
+               
+            </div>
             <div class="mb-3">
                 <label for="phoneNumber" class="form-label">Phone Number (Optional)</label>
                 <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber">
@@ -50,12 +55,14 @@
             <label class="check-label" for="other">Other</label>
            </div>
             </div>
-           
-            <div class="mb-3">
-                <label for="address" class="form-label">Address</label>
-                <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+           <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label"> Address</label>
+                    <input type="text" class="form-control" id="address.street" name="address.street" placeholder="Enter street" required>
+                     <input type="text" class="form-control" id="address.city" name="address.city" placeholder="Enter city" required>
+                </div>
             </div>
-             
+            
          <ul class="list-group"  >
             <li class="list-group-item">
               <input class="form-check-input me-1" type="checkbox" value="Java"  name="course" aria-label="...">

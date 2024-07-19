@@ -17,41 +17,40 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
 </bean>
-  
-  <bean name="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+ <!-- DataSource Configuration -->
+    <bean name="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost:3306/complex_form"/>
         <property name="username" value="root"/>
         <property name="password" value="ashum"/>
     </bean>
-  
-  <bean name="factory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-     <property name="dataSource" ref="ds"/>
+   <bean  name="factory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+     <property name="dataSource" ref="ds"></property>
      <property name="hibernateProperties">
         <props>
             <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
             <prop key="hibernate.show_sql">true</prop>
             <prop key="hibernate.hbm2ddl.auto">update</prop>
         </props>
-     </property>
+    </property>
      
      <property name="annotatedClasses">
        <list>
-          <value>
-          com.company.model.Form
-          </value>
+          <value>com.company.model.Form</value>
+          <value>com.company.model.Address</value>
        </list>
      </property>
-  </bean>
+   </bean>
+    
+    
+  <bean class="org.springframework.orm.hibernate5.HibernateTemplate"  name="hibernateTemplate">
+     <property name="sessionFactory" ref="factory" />
+ </bean>
 
-  <bean class="org.springframework.orm.hibernate5.HibernateTemplate" name="hibernateTemplate">
-     <property name="sessionFactory" ref="factory"/>
-  </bean>
-  
-  <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
-     <property name="sessionFactory" ref="factory"/>
-  </bean>
-  
+<bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
+    <property name="sessionFactory" ref="factory" />
+</bean>
+
 </beans>
 
 

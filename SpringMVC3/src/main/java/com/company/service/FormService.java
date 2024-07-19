@@ -9,7 +9,7 @@ import com.company.model.Form;
 public class FormService {
 	@Autowired
    private FormDao  formDao;
-	public int createForm(Form form) {
+	public long createForm(Form form) {
 		return this.formDao.saveForm(form);
 	}
 }

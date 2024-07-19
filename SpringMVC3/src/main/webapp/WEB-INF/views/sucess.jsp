@@ -31,6 +31,8 @@ border
       <th scope="col">PhoneNumber</th>
       <th scope="col">Gender</th>
       <th scope="col">Courses</th>
+      <th scope="col">Street</th>
+      <th scope="col">City</th>
       <th scope="col">Country</th>
     </tr>
   </thead>
@@ -43,6 +45,8 @@ border
       <td>${form.phoneNumber}</td>
       <td>${form.gender}</td>
       <td>${form.course}</td>
+      <td>${form.address.street}</td>
+      <td>${form.address.city}</td>
       <td>${form.country}</td>
     </tr>
     

@@ -11,8 +11,8 @@ public class FormDao {
 	@Autowired
    private HibernateTemplate hibernateTemplate;
 	@Transactional
-	public int saveForm(Form form) {
-		return  (Integer)this.hibernateTemplate.save(form);
+	public long saveForm(Form form) {
+		return  (Long)this.hibernateTemplate.save(form);
 		
 	}
 }

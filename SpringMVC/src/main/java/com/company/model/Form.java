@@ -3,13 +3,17 @@ package com.company.model;
 
 import java.util.List;
 
-import com.company.Controller.Address;
-
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,19 +22,22 @@ public class Form {
 @Id
 @Column(name="ID")
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private long id;
+private Long id;
 @Column(name = "Name")
 private String name;
 @Column(name = "Email")
 private String email;
 @Column(name = "Date")
 private String date;
-@Column(name = "PhoneNumber")
+@Column(name = "Phone_Number")
 private String phoneNumber;
 @Column(name = "Gender")
 private String gender;
-@Column(name = "Address")
+@OneToOne(cascade = CascadeType.ALL)
+@JoinColumn(name = "address_id")
 private Address address;
+@ElementCollection(fetch = FetchType.EAGER)
+@CollectionTable(name = "Course_List", joinColumns = @JoinColumn(name = "form_id"))
 @Column(name = "Course")
 private List<String> course;
 @Column(name = "Country")

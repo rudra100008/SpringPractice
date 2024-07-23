@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>   
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,13 +10,18 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <title>Registration Form</title>
   </head>
   <body>
    <div class="container mt-3">
         <h1>Registration Form</h1>
-        <form 	action="handleForm" method="post">
+        <form:errors path="form.*" >
+            <div class="alert alert-danger" role="alert">
+           There are errors in the form. Please review the highlighted fields and make corrections.
+        </div>
+           </form:errors>
+       
+      <form method="post" action="handleForm" modelAttribute="form" class="needs-validation" novalidate>
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="name" class="form-label"> Name</label>
@@ -91,7 +97,7 @@
                 <select class="form-select" id="country" name="country" aria-label="Default select example">
                     <option value="">Select Country</option>
                     <option value="US">United States</option>
-                    <option value="CA">Canada</option>
+                    <option value="CANADA">Canada</option>
                     <option value="UK">United Kingdom</option>
                     <option value="...">...</option>
                 </select>

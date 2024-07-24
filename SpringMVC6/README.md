@@ -24,10 +24,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(Exception.class)
-    @ResponseBody
-    public ResponseEntity<String> handleException(Exception ex) {
-        // Return a custom error message
-        return new ResponseEntity<>("An error occurred: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+     @ExceptionHandler(Exception.class) // Handles all exceptions
+	    public String exceptionHandler(Exception ex, Model model) {
+	        // Log the exception (optional)
+	        ex.printStackTrace();
+	        
+	        // Add exception details to the model to display in the error page
+	        model.addAttribute("exception", ex);
+	        
+	        return "error"; // Forward to error.jsp
+	    }
 }

@@ -23,7 +23,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
+    @RequestMapping("/")
+	public String home() {
+		System.out.println("Home page is running.......");
+		String str=null;
+                System.out.println(str.length());//created NullPointerException which will envoke error.jsp because of exceptionHandler() 
+                //method
+		return "home";
+	}
      @ExceptionHandler(Exception.class) // Handles all exceptions
 	    public String exceptionHandler(Exception ex, Model model) {
 	        // Log the exception (optional)

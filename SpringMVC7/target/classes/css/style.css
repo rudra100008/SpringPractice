@@ -1,0 +1,18 @@
+@charset "UTF-8";
+body {
+    background-color: black;
+    color:white;
+}
+img.photo {
+    width: 200px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    margin: 20px; /* Add margin around the image */
+    display: block; /* Make the image a block element */
+    transition: transform 0.3s; /* Add a transition for hover effect */
+}
+
+img.photo:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+}

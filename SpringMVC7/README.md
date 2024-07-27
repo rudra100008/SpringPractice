@@ -8,16 +8,13 @@ This document provides an overview of how to use `@ControllerAdvice`, `@Exceptio
 2. [@ControllerAdvice](#controlleradvice)
    - [Overview](#overview)
    - [Usage Example](#usage-example)
-3. [@ExceptionHandler](#exceptionhandler)
-   - [Overview](#overview-1)
-   - [Usage Example](#usage-example-1)
-4. [Implementing a HandlerInterceptor](#implementing-a-handlerinterceptor)
+3. [Implementing a HandlerInterceptor](#implementing-a-handlerinterceptor)
    - [Pre-Handle Method](#pre-handle-method)
    - [Post-Handle Method](#post-handle-method)
    - [After Completion Method](#after-completion-method)
-5. [Registering the HandlerInterceptor](#registering-the-handlerinterceptor)
-6. [Advanced Use Cases](#advanced-use-cases)
-7. [Conclusion](#conclusion)
+4. [Registering the HandlerInterceptor](#registering-the-handlerinterceptor)
+5. [Advanced Use Cases](#advanced-use-cases)
+6. [Conclusion](#conclusion)
 
 ## Introduction
 
